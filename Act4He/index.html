@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Reto</title> <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!--Contenedor Principal--> 
+    <main class="form-wrapper">
+
+      <!--Form-->
+        <form id="ticketForm" class="form">
+
+
+          <!--Header-->
+            <header class="form-header">
+                <img src="assets/images/logo-full.svg" alt="Coding Conf Logo" class="logo">
+                <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+                <p>Secure your spot at next year’s biggest coding conference.</p>
+            </header>
+
+            <!--Upload-->
+            <div class="upload-box" id="uploadBox">
+                <input type="file" id="avatar" accept="image/png, image/jpeg" hidden>
+                
+                <label for="avatar" id="uploadLabel" class="upload-label">
+                    <img src="assets/images/icon-upload.svg" alt="Upload Icon">
+                    <p>Drag and drop or click to upload</p>
+                </label>
+
+                <div id="previewContainer" class="preview-container" hidden>
+                    <img id="avatarPreview" src="#" alt="Avatar Preview" class="avatar-preview">
+                    <p class="uploaded-status">Imagen lista para el ticket</p>
+                    <button type="button" id="changeImageBtn" class="change-btn">Cambiar imagen</button>
+                </div>
+
+                <small>Upload your photo (JPG or PNG, max size: 500KB).</small>
+            </div>
+
+            <!--Name-->
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Your Name" required>
+
+            <!--Email-->
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="example@email.com" required>
+
+            <!--User Github-->
+            <label for="github">GitHub Username</label>
+            <input type="text" id="github" placeholder="@yourusername" required>
+
+            <button type="submit" class="btn-submit">Generate My Ticket</button>
+        </form>
+    </main>
+    
+     <!--Secion Tikect-->
+    <div id="ticketSection" class="ticket-section" hidden>
+        <header class="ticket-header">
+            <img src="assets/images/logo-full.svg" alt="Coding Conf Logo" class="logo">
+            <h2 id="ticketMessage"></h2> <p id="ticketSubMessage"></p> </header>
+
+        <div class="ticket">
+            <div class="ticket-left">
+                <div class="ticket-logo">
+                    <img src="assets/images/logo-full.svg" alt="Conference logo">
+                    
+                </div>
+                
+                <p class="ticket-date">Jan 31, 2025 / Austin, TX</p>
+
+                <div class="ticket-user">
+                    <img id="ticketAvatar" src="assets/default-avatar.png" alt="User Avatar">
+                    <div>
+                        <p id="ticketName"></p> <p id="ticketGithub"></p> </div>
+                </div>
+            </div>
+
+            <div class="ticket-right">
+                <p>#070609</p> </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
